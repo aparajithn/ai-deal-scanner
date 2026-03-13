@@ -1,15 +1,30 @@
 {
-  "name": "ai-deal-scanner",
+  "name": "ai-deal-scanner-backend",
   "version": "1.0.0",
   "type": "module",
-  "description": "Reddit scanner for business sale signals",
-  "main": "reddit-scanner.js",
+  "description": "Reddit scanner + AI qualifier + Express API for business broker lead gen",
+  "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "cron": "node cron.js",
+    "dev": "node --watch index.js",
     "scan": "node reddit-scanner.js",
-    "test": "node reddit-scanner.js"
+    "qualify": "node ai-qualifier.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.39.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "node-fetch": "^3.3.2",
-    "openai": "^6.27.0"
-  }
+    "openai": "^4.28.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aparajithn/ai-deal-scanner.git"
+  },
+  "author": "Aparajith Nagarajan",
+  "license": "MIT"
 }
