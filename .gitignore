@@ -35,3 +35,4 @@ leads.json
 
 # Supabase local
 .supabase/
+DEPLOYMENT_CREDENTIALS.md
