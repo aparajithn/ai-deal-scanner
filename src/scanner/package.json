@@ -1,0 +1,15 @@
+{
+  "name": "ai-deal-scanner",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Reddit scanner for business sale signals",
+  "main": "reddit-scanner.js",
+  "scripts": {
+    "scan": "node reddit-scanner.js",
+    "test": "node reddit-scanner.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "openai": "^6.27.0"
+  }
+}
