@@ -36,9 +36,19 @@ app.get('/health', (req, res) => {
 
 /**
  * GET /api/active-users
- * Returns count of users with scanning enabled
+ * Returns count of users with scanning enabled (requires API key auth)
+ * 
+ * Headers:
+ *   X-API-Key: <RENDER_API_KEY>
  */
 app.get('/api/active-users', async (req, res) => {
+  // Check API key
+  const apiKey = req.headers['x-api-key'];
+  
+  if (!apiKey || apiKey !== RENDER_API_KEY) {
+    return res.status(401).json({ error: 'Unauthorized: Invalid or missing API key' });
+  }
+  
   try {
     const users = await getActiveUsers();
     res.json({
