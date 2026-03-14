@@ -190,4 +190,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     });
 }
 
-export { scanReddit, searchReddit, extractLeadData, deduplicate };
+export { scanReddit, searchReddit, extractLeadData, deduplicate, filterByDate };

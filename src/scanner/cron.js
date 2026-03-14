@@ -25,7 +25,7 @@ if (!OPENAI_API_KEY) {
 /**
  * Scan and qualify leads for a single user
  */
-export async function scanAndQualifyForUser(userConfig) {
+async function scanAndQualifyForUser(userConfig) {
   const userId = userConfig.user_id;
   const email = userConfig.users?.email || 'unknown';
   const subreddits = userConfig.subreddits || ['smallbusiness', 'Entrepreneur'];
